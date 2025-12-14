@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{042CB458-C0FB-4E96-9F6E-82F752A79399}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>point_of_Sales.My.MyApplication</StartupObject>
+    <RootNamespace>point_of_Sales</RootNamespace>
+    <AssemblyName>point_of_Sales</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>point_of_Sales.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>point_of_Sales.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\ref\barcode and qrcode dll\barcode and qrcode dll\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\ref\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\frm_ChangePassword.Designer.vb">
+      <DependentUpon>frm_ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_KonfirmasiPengembalian.Designer.vb">
+      <DependentUpon>frm_KonfirmasiPengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_KonfirmasiPengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManageBarang.Designer.vb">
+      <DependentUpon>frm_ManageBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManageBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManagePembelian.Designer.vb">
+      <DependentUpon>frm_ManagePembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManagePembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManagePengembalian.Designer.vb">
+      <DependentUpon>frm_ManagePengembalian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManagePengembalian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManagePenjualan.Designer.vb">
+      <DependentUpon>frm_ManagePenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManagePenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManageStok.Designer.vb">
+      <DependentUpon>frm_ManageStok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManageStok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManageSupplier.Designer.vb">
+      <DependentUpon>frm_ManageSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManageSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_ManageUsers.Designer.vb">
+      <DependentUpon>frm_ManageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_ManageUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_PopUpBarangBaru.Designer.vb">
+      <DependentUpon>frm_PopUpBarangBaru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_PopUpBarangBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_PopUpPembelianBaru.Designer.vb">
+      <DependentUpon>frm_PopUpPembelianBaru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_PopUpPembelianBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_PopUpUbahHargaMassal.Designer.vb">
+      <DependentUpon>frm_PopUpUbahHargaMassal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_PopUpUbahHargaMassal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_tbhKategori.Designer.vb">
+      <DependentUpon>frm_tbhKategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_tbhKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\frm_tbhSatuan.Designer.vb">
+      <DependentUpon>frm_tbhSatuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\frm_tbhSatuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\mainForm_Admin.Designer.vb">
+      <DependentUpon>mainForm_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\mainForm_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\frm_ListSemuaPenjualan.Designer.vb">
+      <DependentUpon>frm_ListSemuaPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\frm_ListSemuaPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\frm_ManagePenjualanDelivery.Designer.vb">
+      <DependentUpon>frm_ManagePenjualanDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\frm_ManagePenjualanDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\frm_ManagePenjualanPickup.Designer.vb">
+      <DependentUpon>frm_ManagePenjualanPickup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\frm_ManagePenjualanPickup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\frm_PopUpPengembalianBaru.Designer.vb">
+      <DependentUpon>frm_PopUpPengembalianBaru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\frm_PopUpPengembalianBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\frm_UpdateLunas_DanaDiterima.Designer.vb">
+      <DependentUpon>frm_UpdateLunas_DanaDiterima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\frm_UpdateLunas_DanaDiterima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashier\mainForm_Cashier.Designer.vb">
+      <DependentUpon>mainForm_Cashier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\mainForm_Cashier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbconnection.vb" />
+    <Compile Include="employee\frm_DeliveryManage.Designer.vb">
+      <DependentUpon>frm_DeliveryManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\frm_DeliveryManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee\frm_PickupManage.Designer.vb">
+      <DependentUpon>frm_PickupManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\frm_PickupManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee\frm_StokBarang.Designer.vb">
+      <DependentUpon>frm_StokBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\frm_StokBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee\frm_UpdateStatusPengiriman.Designer.vb">
+      <DependentUpon>frm_UpdateStatusPengiriman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\frm_UpdateStatusPengiriman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee\mainForm_Employee.Designer.vb">
+      <DependentUpon>mainForm_Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee\mainForm_Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.vb">
+      <DependentUpon>loginForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="migrate.Designer.vb">
+      <DependentUpon>migrate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="migrate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mod_Models.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin\frm_ChangePassword.resx">
+      <DependentUpon>frm_ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_KonfirmasiPengembalian.resx">
+      <DependentUpon>frm_KonfirmasiPengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManageBarang.resx">
+      <DependentUpon>frm_ManageBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManagePembelian.resx">
+      <DependentUpon>frm_ManagePembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManagePengembalian.resx">
+      <DependentUpon>frm_ManagePengembalian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManagePenjualan.resx">
+      <DependentUpon>frm_ManagePenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManageStok.resx">
+      <DependentUpon>frm_ManageStok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManageSupplier.resx">
+      <DependentUpon>frm_ManageSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_ManageUsers.resx">
+      <DependentUpon>frm_ManageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_PopUpBarangBaru.resx">
+      <DependentUpon>frm_PopUpBarangBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_PopUpPembelianBaru.resx">
+      <DependentUpon>frm_PopUpPembelianBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_PopUpUbahHargaMassal.resx">
+      <DependentUpon>frm_PopUpUbahHargaMassal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_tbhKategori.resx">
+      <DependentUpon>frm_tbhKategori.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\frm_tbhSatuan.resx">
+      <DependentUpon>frm_tbhSatuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\mainForm_Admin.resx">
+      <DependentUpon>mainForm_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\frm_ListSemuaPenjualan.resx">
+      <DependentUpon>frm_ListSemuaPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\frm_ManagePenjualanDelivery.resx">
+      <DependentUpon>frm_ManagePenjualanDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\frm_ManagePenjualanPickup.resx">
+      <DependentUpon>frm_ManagePenjualanPickup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\frm_PopUpPengembalianBaru.resx">
+      <DependentUpon>frm_PopUpPengembalianBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\frm_UpdateLunas_DanaDiterima.resx">
+      <DependentUpon>frm_UpdateLunas_DanaDiterima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\mainForm_Cashier.resx">
+      <DependentUpon>mainForm_Cashier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\frm_DeliveryManage.resx">
+      <DependentUpon>frm_DeliveryManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\frm_PickupManage.resx">
+      <DependentUpon>frm_PickupManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\frm_StokBarang.resx">
+      <DependentUpon>frm_StokBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\frm_UpdateStatusPengiriman.resx">
+      <DependentUpon>frm_UpdateStatusPengiriman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee\mainForm_Employee.resx">
+      <DependentUpon>mainForm_Employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="migrate.resx">
+      <DependentUpon>migrate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
